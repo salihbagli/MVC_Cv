@@ -1,0 +1,31 @@
+﻿@model MVC_Cv.Models.Entity.TblHakkımda
+@{
+    ViewBag.Title = "HakkimdaDüzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x=>x.ID,new {@class ="form-control"})
+    <br/>
+    @Html.Label("Ad")
+    @Html.TextBoxFor(x=>x.Ad,new {@class ="form-control"})
+    <br/>
+    @Html.Label("Soyad")
+    @Html.TextBoxFor(x=>x.Soyad,new {@class ="form-control"})
+    <br/>
+    @Html.Label("Adres")
+    @Html.TextBoxFor(x=>x.Adres,new {@class ="form-control"})
+    <br/>
+    @Html.Label("Mail")
+    @Html.TextAreaFor(x=>x.Mail,new {@class ="form-control" } )
+    <br/>
+    @Html.Label("Telefon")
+    @Html.TextAreaFor(x=>x.Telefon,new {@class ="form-control" } )
+    <br/>
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x=>x.Aciklama,new {@class ="form-control" } )
+    <br/>
+    <button class="btn btn-primary">Güncelle</button>
+</form>
+

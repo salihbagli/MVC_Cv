@@ -1,0 +1,25 @@
+﻿@model MVC_Cv.Models.Entity.TblYetenek
+
+@{
+    ViewBag.Title = "YetenekEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<br/>
+<h3 class="card-title" style="font-size:30px"><b>YETENEK EKLEME SAYFASI</b></h3>
+<br/>
+<br/>
+<form method="post">
+    
+    @Html.Label("Yetenek ")
+    @Html.TextBoxFor(x=>x.Yetenek,new {@class ="form-control"})
+    <br/>
+    @Html.Label("Oran")
+    @Html.TextBoxFor(x=>x.Oran,new {@class ="form-control"})
+    <br/>
+    
+    <button class="btn btn-primary">Ekle</button>
+</form>
+

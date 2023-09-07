@@ -1,0 +1,25 @@
+﻿@model MVC_Cv.Models.Entity.TblSosyalMedya
+@{
+    ViewBag.Title = "SosyalMedyaEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h3 class="card-title" style="font-size:30px"><b>SOSYAL MEDYA EKLEME SAYFASI</b></h3>
+<br />
+<br/>
+<form method="post">
+
+    @Html.Label("Sosyal Medya ")
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    @Html.Label("Link")
+    @Html.TextBoxFor(x => x.Link, new { @class = "form-control" })
+    <br />
+    @Html.Label("İkon")
+    @Html.TextBoxFor(x => x.İkon, new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-primary">Ekle</button>
+</form>

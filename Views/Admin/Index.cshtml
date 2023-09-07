@@ -1,0 +1,87 @@
+﻿@using Microsoft.Ajax.Utilities
+@using MVC_Cv.Models.Entity
+@model List<TblAdmin>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title" style="font-size:30px"><b>ADMİN İŞLEMLERİ</b></h3>
+
+                            </div>
+
+
+                            <div class="card-body">
+
+                                <table class="table table-bordered">
+
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 10px">#</th>
+                                            <th>Kullanıcı Adı</th>
+                                            <th>Kullanıcı Şifre</th>
+                                            <th>Düzenle</th>
+                                            <th>Sil</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+
+
+                                            <tr>
+                                                <td>@item.ID</td>
+                                                <td>@item.KullaniciAdi</td>
+                                                <td>@item.KullaniciSifre</td>
+
+                                                <td>
+                                                    <a class="btn btn-outline-dark" href="../Yetenek/YetenekDüzenle/@item.ID">
+                                                        <i class="fas fa-pencil-alt"></i>
+                                                    </a>
+
+                                                </td>
+                                                <td>
+                                                    <a href="../Admin/AdminSil/@item.ID" class="btn btn-outline-dark">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </a>
+                                                </td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+
+
+
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="card-body"><a href="../Admin/AdminEkle/" class="btn btn-danger  fas fa-plus-square">                      Ekle </a></div>
+        <br />
+        <br />
+        <!-- /.content -->
+    </div>
+
+</body>
+</html>
+

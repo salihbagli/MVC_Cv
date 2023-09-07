@@ -1,0 +1,71 @@
+﻿@using MVC_Cv.Models.Entity
+@model List<TblSertifika>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- /.col -->
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header p-2">
+
+                        </div>
+
+                        @foreach (var item in Model)
+                        {
+                            <div class="card-body">
+
+                                <div class="timeline timeline-inverse">
+                                    <!-- timeline time label -->
+                                    <div class="time-label">
+                                        <span class="bg-success">
+                                            @item.Tarih
+                                        </span>
+                                    </div>
+                                    <!-- /.timeline-label -->
+                                    <!-- timeline item -->
+                                    <div>
+                                        <i class="fas fa-envelope bg-primary"></i>
+
+
+                                        <div class="timeline-item">
+
+                                            <h3 class="timeline-header"><strong>@item.Sertifikalar </strong></h3>
+                                            <div class="timeline-body">
+                                                <a href="">@item.Link</a>
+
+                                                <a href="../Sertifika/SertifikaSil/@item.ID"><button class=" fas fa-trash-alt bg "> Sil</button></a>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                        }
+                        
+                    </div>
+                    <a href="../Sertifika/SertifikaEkle" class="btn btn-primary">Sertifika Ekle</a>
+                </div>
+                  <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
+</body>
+</html>
+
+

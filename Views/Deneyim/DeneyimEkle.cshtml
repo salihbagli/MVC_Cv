@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "DeneyimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br/>
+<form method="post">
+    <input type="text" name="Baslik" placeholder="Başlık" class="form-control"/>
+    <br/>
+    <input type="text" name="AltBaslik" placeholder="Alt Başlık" class="form-control"/>
+    <br/>
+    <input type="text" name="Tarih" placeholder="Tarih" class="form-control"/>
+    <br/>
+   <textarea class="form-control" rows="5" placeholder="Acıklama giriniz" name="Aciklama"></textarea>
+    <br/>
+    <button class="btn btn-primary">Kaydet</button>
+</form>
+

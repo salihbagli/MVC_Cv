@@ -1,0 +1,18 @@
+﻿@using MVC_Cv.Models.Entity
+@model List<TblSertifika>
+
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Ödüller & Sertifikalar</h2>
+    @foreach (var item in Model)
+    {<ul class="fa-ul mb-0">
+            <li>
+                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                <a href="@item.Link">@item.Sertifikalar</a>
+               
+            </li>
+
+        </ul>
+    }
+
+</div>

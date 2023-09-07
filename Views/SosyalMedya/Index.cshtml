@@ -1,0 +1,89 @@
+﻿
+
+@using Microsoft.Ajax.Utilities
+@using MVC_Cv.Models.Entity
+@model List<TblSosyalMedya>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+    string renk = "";
+    string label = "";
+}
+
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title" style="font-size:30px"><b>SOSYAL MEDYA LİSTESİ</b></h3>
+
+                            </div>
+
+
+                            <div class="card-body">
+                                @foreach (var item in Model) { }
+                                <table class="table table-bordered">
+
+                                    <thead>
+                                        <tr  style="background-color:darkviolet; color:aliceblue">
+                                            <th style="width: 10px">#</th>
+                                            <th>Sosyal Medya</th>
+                                            <th style="width: 40px">Düzenle</th>
+                                            <th style="width: 40px">Sil</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                       @foreach (var item in Model)
+                                       {
+                                           <tr >
+                                               <td  style="background-color:coral">@item.ID</td>
+                                               <td><i class="@item.İkon"> </i>   @item.Ad</td>
+
+                                               
+                                               <td>
+                                                   <a class="btn btn-outline-success" href="../SosyalMedya/SosyalMedyaDuzenle/@item.ID">
+                                                       <i class="fas fa-pencil-alt"></i>
+                                                   </a>
+
+                                               </td>
+                                               <td>
+                                                   <a href="/SosyalMedya/SosyalMedyaSil/@item.ID" class="btn btn-outline-danger">
+                                                       <i class="fas fa-trash-alt"></i>
+                                                   </a>
+                                               </td>
+
+                                           </tr>
+                                       }
+                                    </tbody>
+
+
+
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="card-body"><a href="../SosyalMedya/SosyalMedyaEkle/" class="btn btn-danger  fas fa-plus-square">                      Ekle </a></div>
+        <br />
+        <br />
+        <!-- /.content -->
+    </div>
+
+</body>
+</html>
+

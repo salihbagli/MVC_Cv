@@ -1,0 +1,28 @@
+﻿
+@model MVC_Cv.Models.Entity.TblAdmin
+
+@{
+    ViewBag.Title = "AdminEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<h3 class="card-title" style="font-size:30px"><b>ADMİN EKLEME SAYFASI</b></h3>
+<br />
+<br />
+<form method="post">
+
+    @Html.Label("Kullanıcı Adı ")
+    @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control" })
+    <br />
+    @Html.Label("Şifre")
+    @Html.TextBoxFor(x => x.KullaniciSifre, new { @class = "form-control" })
+    <br />
+   
+
+    <button class="btn btn-primary">Ekle</button>
+</form>
+
+
+
