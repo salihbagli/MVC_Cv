@@ -26,4 +26,4 @@ git clone https://github.com/salihbagli/MVC_Cv.git
 Mssql deki connection stringinizi değiştirerek projeyi ayağa kaldırabilirsiniz.
 
 # Using
-Admin sayfasına gitmek için kendi Local adresinizin sonuna /Login/Index ekleyerek indexine gitmeniz gerekmektedir.  Sonra login sayfasına yönlendirileceksiniz ve login yaparak admin panelini kullanmaya başlayailirsiniz.
+Admin sayfasına gitmek için kendi Local adresinizin sonuna /Login/Index ekleyerek indexine gitmeniz gerekmektedir.  Sonra login sayfasına yönlendirileceksiniz ve login yaparak admin panelini kullanmaya başlayabilirsiniz.
